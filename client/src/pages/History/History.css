@@ -1,0 +1,39 @@
+.mainHistoryBG {
+    display: flex;
+    justify-content: center;
+    background: url('https://ucarecdn.com/2c5c5f39-748f-4f2b-8eee-178b8af6e06e/ashedmondsfsI_MRsic0unsplash.jpg');
+    height: 89.2vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid white;
+    padding: 10px;
+}
+
+.mainContainerHistory {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.historyTitle {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-bottom: 1px #71c3f7 solid;
+
+}
+
+.experiencesContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    height: 720px;
+    width: 95%;
+    margin-left: 40px;
+}
+

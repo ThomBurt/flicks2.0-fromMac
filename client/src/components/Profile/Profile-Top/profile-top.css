@@ -1,0 +1,68 @@
+.my-profile-main {
+    display: flex;
+    justify-content: center;
+    margin-left: 12rem;
+}
+
+.top-profile-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    width: 85%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+
+.image-and-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.my-profile-img {
+    width:150px;
+    border-radius:50%;
+    overflow:hidden;
+    border: 2px solid white;
+    box-shadow:0 0 0 4px rgba(255,255,255,0.2);
+    margin: 20px;
+}
+
+.friend-profile-img {
+    border-radius:50%;
+    overflow:hidden;
+    border: 2px solid white;
+    box-shadow:0 0 0 4px rgba(255,255,255,0.1);
+    margin-right: 7px;
+}
+
+.overall-button-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.button-div-header {
+    display: flex;
+    height: 3rem;
+    flex-direction: row;
+    margin: 12px;
+}
+
+.button-edit-profile {
+    margin-right: 1.5rem;
+    background-color: #e4e6eb;
+    color: black;
+    border: none;
+    border-radius: 7px;
+    padding: 0 1rem;
+    cursor: pointer;
+    
+}
+.button-edit-profile:hover {
+    background-color: #d9dbde;
+    box-shadow:0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.createdAtSpan {
+    text-decoration: underline;
+}

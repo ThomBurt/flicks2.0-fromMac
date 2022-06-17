@@ -1,0 +1,93 @@
+.cocktail-main {
+    background: url('https://ucarecdn.com/2c5c5f39-748f-4f2b-8eee-178b8af6e06e/ashedmondsfsI_MRsic0unsplash.jpg');
+    height: 89.2vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid white;
+    padding: 10px;
+}
+
+
+.cocktail-button-div {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.cocktail-button {
+  color: black;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  letter-spacing: .55px;
+  margin-top: 20px;
+  transition: ease-in-out 0.2s;
+}
+.cocktail-button:hover {
+    transform: scale(1.05);
+    background-color: #7a7070;
+    color: white;
+}
+
+.div-hide {
+    display: none;
+}
+
+.refresh-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3872b3;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+.refresh-button:hover {
+    background-color: #22548d;
+    transform: scale(1.1);
+    animation: rotate 0.3s linear;
+}
+
+
+.results-div {
+    justify-content: center;
+    height: 70vh;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    background-color: rgba(0,0,0,.75);
+}
+
+.link-btn {
+    margin-top: 40px;
+}
+
+
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+

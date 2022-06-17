@@ -1,0 +1,53 @@
+.main-div-updateProfile {
+    margin: 10px;
+}
+
+.menu{
+    background-color: #71c3f7;
+	height:100vh;
+	width:240px;
+	position:fixed;
+	top: 5rem;
+	left:0;
+	z-index:5;
+	outline:none;
+}
+
+.avatar{
+    background:rgba(0,0,0,0.1);
+    padding:2em 0.5em;
+    text-align:center;
+}
+
+.profile-img{
+    width:100px;
+    border-radius:50%;
+    overflow:hidden;
+    border: 2px solid white;
+    box-shadow:0 0 0 4px rgba(255,255,255,0.2);
+}
+
+.updateProfileUl{
+    list-style:none;
+    padding:0.5em 0;
+    margin: 10px;
+}
+.updateProfileLi{
+    padding:0.5em 1em 0.5em 3em;
+    font-size:0.95em;
+    font-weight:regular;
+    background-repeat:no-repeat;
+    background-position:left 15px center;
+    background-size:auto 20px;
+    transition:all 0.15s linear;
+    cursor:pointer;
+} 
+.updateProfileLi:hover {
+    background-color:rgba(0,0,0,0.1);  
+}
+.updateProfileLi:active {
+    background-color:rgba(0,0,0,0.4);  
+}
+.updateProfileLi:focus {
+    outline: none;
+}

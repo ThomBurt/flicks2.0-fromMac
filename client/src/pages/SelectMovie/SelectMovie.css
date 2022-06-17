@@ -1,0 +1,187 @@
+.display-none {
+  display: none;
+}
+
+
+.main-body {
+  background: url('https://ucarecdn.com/f611c3b4-252d-4b5d-926e-195d3b982b32/tysonmoultrieBQTHOGNHo08unsplash.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0;
+}
+
+.div-body-under-main {
+  background-color: rgba(0,0,0,.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid white;
+  padding: 8rem;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.dropdown-div {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.genre-dropbox {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  list-style: none;
+}
+.genre-dropbox:hover {
+  color: #004772;
+
+}
+
+
+.year-range-div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.year-text {
+  margin-bottom: 10px;
+}
+
+
+.submit-button {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  letter-spacing: .55px;
+  padding: 2px 24px;
+  text-align: center;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background: #004772;
+  color: white;
+}
+
+
+.form-title {
+  margin: 10px;
+}
+
+
+.main-results-div {
+  border-radius: 7px;
+  padding: 10px;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(0,0,0,.8);
+  border: 1px solid white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.movie-card-body {
+  margin: 5px;
+}
+
+.movie-img {
+  width: 260px;
+}
+
+.button-to-dinner {
+  margin: 25px;
+}
+
+.submit-button-dinner {
+  color: black;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  letter-spacing: .55px;
+  margin-top: 20px;
+  transition: ease-in-out 0.2s;
+}
+.submit-button-dinner:hover {
+  transform: scale(1.05);
+  background-color: #7a7070;
+  color: white;
+}
+
+.refresh-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.refresh-button-movie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2023;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+.refresh-button-movie:hover {
+  background-color: #51555a;
+  transform: scale(1.1);
+  animation: rotate 0.3s linear;
+}
+
+
+.streaming {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (max-width: 500px) {
+  .main-results-div {
+    width: 80%;
+    height: 90vh;
+    border: none;
+  }
+  .main-card-body {
+    height: 60vh;
+  }
+}
+@media (max-width: 375px) {
+  .main-results-div {
+    width: 80%;
+  }
+}

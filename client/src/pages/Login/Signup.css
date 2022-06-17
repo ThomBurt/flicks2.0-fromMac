@@ -1,0 +1,84 @@
+.main-div {
+    background: url('https://ucarecdn.com/7f4b67a2-a1c4-42ce-824c-20223caa12b4/nathandumlaoEdULZpOKsUEunsplash.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+  }
+
+  .div-to-center-all {
+    display: flex;
+    justify-content: center;
+    /* border: 1px green solid; */
+  }
+  
+  .div-under-main {
+    border: 1px black solid;
+    background-color: rgba(0,0,0,0.7);
+    height: 80%;
+    width: 50%;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 1.5em;
+    /* border: 1px blue solid; */
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  .object-div {
+      justify-content: center;
+      text-align: center;
+      /* border: 1px red solid; */
+  }
+
+ 
+  .h4-title {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .pw-input {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(255, 254, 254, 0.7);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.02);
+    text-align: center;
+    margin-bottom: 27px;
+    margin-right: 40px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .submit-button-login {
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(169, 51, 51, 0.6);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.02);
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: ease-in-out 0.2s;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  }
+  .submit-button-login:hover {
+    background: rgba(214, 65, 65, 0.6);
+    transform: scale(1.03);
+  }
+  
+  .sign-up-link {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .actual-signup-button {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+  }

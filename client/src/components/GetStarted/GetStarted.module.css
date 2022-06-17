@@ -1,0 +1,46 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.search-area {
+    background: url('https://ucarecdn.com/f04f111d-f461-463d-8bfe-28de893ec1f0/lidye1Shk_PkNkNwunsplash.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 7px;
+    background-color: rgba(0,0,0,.6);
+    flex-direction: column;
+    color: white;
+}
+
+.main-header {
+    margin: 10px;
+}
+
+
+
+
+
+@media (max-width: 500px) {
+    .main-div-area {
+        width: 90%;
+        height: 70%;
+    }
+  }
+  @media (max-width: 375px) {
+
+  }

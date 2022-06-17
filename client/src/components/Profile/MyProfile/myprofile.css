@@ -1,0 +1,26 @@
+.main-post-div-profile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.post-div-under-main {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 11rem;
+    padding: 10px;
+}
+
+.recent-act-div-profile {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+

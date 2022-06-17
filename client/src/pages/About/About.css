@@ -1,0 +1,79 @@
+.main-about-div {
+    border-top: 1px white solid;
+   /* background: url("https://ucarecdn.com/ffc56381-1da3-4d8c-ab6a-2ec5710fe33b/petergargiulocGNCepznaV8unsplash.jpg"); */
+   background-color: black;
+} 
+
+.title-div {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px rgb(128, 123, 123) solid;
+}
+
+.about-title {
+    width: 100%;
+    /* background: url("https://ucarecdn.com/71529606-1164-46e2-aa75-7f860765d6fd/SL0828203458022.jpg"); */
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.threeVideoDiv {
+    display: flex;
+    padding: 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-top: white 1px solid;
+}
+
+.threeVideoDiv video {
+    width: 850px;
+}
+
+.about-text {
+    margin: 80px;
+}
+
+.about-text p {
+    padding-bottom: 20px;
+    border-bottom: 1px yellow dotted;
+    margin-bottom: 60px;
+}
+
+.get-started-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px white solid;
+    color: white;
+    background-color: black;
+    height: 205px;
+}
+.get-started-about button {
+    margin-left: 30px;
+    font-family: "DM Sans", sans-serif;
+    padding: 10px 30px;
+    font-size: 24px;
+    cursor: pointer;
+  
+    border-radius: 7px;
+    border-bottom-left-radius: 0;
+  
+    background-color: rgb(255, 170, 0);
+    color: white;
+  
+    transition: all 0.3s;
+}
+.get-started-about button:hover {
+    border-radius: 0px;
+    color: var(--feedback-primary-color);
+    background-color: #ffe5e5;
+}
+
+
+.about-icon-3section {
+    font-size: 60px;
+}
+

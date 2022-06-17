@@ -1,0 +1,74 @@
+.experience {
+    display: flex;
+    width: 30%;
+    height: 53%;
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 1px solid white; 
+    border-radius: 25px;  
+    margin: 10px;
+}
+
+.createdAtHeading {
+    position: absolute;
+    margin-left: 20px;
+}
+.createdAtHeading h3 {
+    text-decoration: underline;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.selection-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.selection-div {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    height: 80%;
+    width: 33%;
+    border: 1px solid white;
+    background-color: rgba(141,94,51, 0.6);
+    margin: 10px;
+    margin-top: 25px;
+    border-radius: 7px;
+}
+
+.selection-div h4 { 
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.moviePosterHistory {
+    height: 180px;
+    text-decoration: underline;
+}
+
+.restaurantHistoryImage {
+    height: 100px;
+}
+
+.drinkHistoryImage {
+    height: 120px;
+}
+
+.click-button-for-modal {
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+.click-button-for-modal:hover {
+    background-color: rgba(255, 255, 255, 0.58);
+}
+

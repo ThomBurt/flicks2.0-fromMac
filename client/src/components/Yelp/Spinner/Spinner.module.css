@@ -1,0 +1,8 @@
+:global(.button).spinner {
+    position: absolute;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: black;
+    border: none;
+    z-index: 10;
+}

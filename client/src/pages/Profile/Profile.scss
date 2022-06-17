@@ -1,0 +1,132 @@
+.main-post-div-profile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.post-div-under-main {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 11rem;
+    padding: 10px;
+}
+
+.recent-act-div-profile {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.overall-form-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(113, 195, 247);
+    border-radius: 25px;
+}
+
+.input-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 15px 0;
+    /* border: 1px solid red; */
+}
+
+.input-form-update-profile {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0.2em 1em;
+}
+
+.submit-button-div-update-form {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button-update-profile {
+    height: 30px;
+    width: 50%;
+    margin-top: 15px;
+    font-size: 15px;
+    background-color: #e4e6eb;
+    color: black;
+    border: none;
+    border-radius: 7px;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+.submit-button-update-profile:hover {
+    background-color: #d9dbde;
+    box-shadow:0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.json-div-test {
+    display: flex;
+    justify-content: center;
+}
+
+
+.image-profile {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+    margin-bottom: -80px;
+    cursor: pointer;
+    background: #f4f4f4;
+    display: table;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 5px 8px rgba(black, 0.35);
+    .dashes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      border: 4px dashed #ddd;
+      opacity: 1;
+    }
+    label {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0 30px;
+      color: grey;
+      opacity: 1;
+    }
+    &.dragging {
+      background-image: none!important;
+      .dashes {
+        animation-duration: 10s;
+        animation-name: spin;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+        opacity: 1!important;
+      }
+      label {
+        opacity: 0.5!important;
+      }
+    }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+
+
+.thom-img {
+    margin-left: 400px;
+}

@@ -1,0 +1,87 @@
+.logo {
+    height: 250px;
+    -webkit-filter: drop-shadow(3px 3px 20px  #222);
+    filter: drop-shadow(3px 3px 15px  #222);
+}
+
+.bg-img {
+    background: url('https://ucarecdn.com/7f4b67a2-a1c4-42ce-824c-20223caa12b4/nathandumlaoEdULZpOKsUEunsplash.jpg');
+    height: 91.5vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.main-div video {
+    height: 350px;
+}
+
+.icon-div {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "proxima-nova", sans-serif;
+    font-style: normal;
+    font-size: 50px;
+    text-shadow: 3px 3px 20px #000000,
+    -2px 1px 30px #000000;
+    letter-spacing: 2px;
+}
+
+.button-div {
+    display: flex ;
+    justify-content: center;
+    margin: 50px;
+}
+
+.button-getStarted {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    font-size: 16px;
+    background: #c5d0d2;
+    color: #013445;
+    border: solid 1px white;
+    box-shadow: 0px 8px 35px rgba(0, 0, 0, 1.5);
+    transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+}
+.button-getStarted:hover {
+    background: #8db2bb;
+    box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
+    color: white;
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .header {
+        display: flex;
+        justify-content: center ;
+        font-size: 30px;
+        text-align: center;
+    }
+
+  }
+  @media (max-width: 375px) {
+
+  }

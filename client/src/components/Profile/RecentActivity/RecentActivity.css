@@ -1,0 +1,46 @@
+.recent-activity-div {
+    padding: 10px;
+}
+
+.recent-activity-div h1 {
+    text-align: center;
+}
+
+.recent-activity-div img {
+    margin: 0.5rem 2rem;
+}
+
+.experience-profile-div {
+    background-color: #71c3f7;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 25px;
+    color: white;
+}
+
+.experience-image-profile-div {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #a4d8f8;
+    border-bottom: 1px solid #a4d8f8;
+
+}
+
+.interaction-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.like-comment-divs > * {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.like-comment-divs > *:hover {
+    background-color: #4bb5f7;
+    border-radius: 10%;
+}
