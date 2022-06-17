@@ -11,7 +11,8 @@ import { RiArrowGoBackFill } from "react-icons/ri";
 import { USER_UPDATE } from '../../utils/mutations';
 import { ADD_EXPERIENCE } from '../../utils/mutations';
 import { SAVE_MOVIE } from '../../utils/mutations';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+//import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useQuery, useMutation } from '@apollo/client';
 
 import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
 import { EXPERIENCE } from '../../utils/queries';
@@ -36,9 +37,9 @@ const SelectMovie = () => {
 }, [data]);
 
   const [id, setId] = useState("");
-   // console.log(id.userId)
+  //console.log(id.userId)
 
-  const userId = id.userId
+
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -67,7 +68,7 @@ const SelectMovie = () => {
   //   }
   // })
 
-  const [addExperience, { error1 }] = useMutation(ADD_EXPERIENCE, {
+  const [addExperience] = useMutation(ADD_EXPERIENCE, {
     update(cache, { data: { addExperience } }) {
       try {
                 // update thought array's cache
@@ -76,7 +77,7 @@ const SelectMovie = () => {
         // prepend the newest thought to the front of the array
         cache.writeQuery({
           query: USER_TO_GET_EXPERIENCE_ID ,
-          data: { experience: [addExperience, ...experience] },
+          data: { experiences: [addExperience, ...experience] },
         });
       } catch (e) {
         console.error(e);
@@ -214,11 +215,13 @@ const SelectMovie = () => {
   //const streamingOutput = streamingState.map(item => <div style={{"marginRight" : "10px"}} key={item.name}>{item.name}</div>)
   //console.log(data)
   const newUserId = (id.userId)
+  //console.log(newUserId)
+
 
   const addNewExperience = async () => {
     try {
       await addExperience({
-        variables: { newUserId }
+        variables: { id: newUserId }
       })
       console.log('experience added')
     } catch (e) {

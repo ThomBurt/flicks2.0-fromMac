@@ -81,6 +81,7 @@ query User($id: ID!) {
     _id
     experiences {
       _id
+      createdAt
     }
   }
 }`
