@@ -6,6 +6,10 @@ export const GET_ME = gql`
     query Me {
       me {
         _id
+        experiences {
+          _id
+          createdAt
+        }
       }
     }
 `;
@@ -16,8 +20,13 @@ export const Me = gql`
     _id
     username
     email
+    experiences {
+      _id
+      createdAt
+    }
   }
 }`
+
 
 export const PROFILE = gql`
     query {

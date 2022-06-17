@@ -15,9 +15,9 @@ import { SAVE_MOVIE } from '../../utils/mutations';
 import { useQuery, useMutation } from '@apollo/client';
 
 import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
-import { EXPERIENCE } from '../../utils/queries';
+//import { EXPERIENCE } from '../../utils/queries';
 
-import { PROFILE } from '../../utils/queries';
+//import { PROFILE } from '../../utils/queries';
 import { GET_ME } from '../../utils/queries';
 
 
@@ -27,17 +27,28 @@ const SelectMovie = () => {
   const {data} = useQuery(GET_ME);
  // console.log(data)
 
+  //const {experienceData} = useQuery( USER_TO_GET_EXPERIENCE_ID );
+  //console.log(data)
+
   useEffect(()=> {
     if (data) {
         // console.log(data)
        setId({
         userId: data.me._id
         });
+        setExperienceData({
+          myExperiences: data.me.experiences 
+        })
     }
 }, [data]);
 
   const [id, setId] = useState("");
   //console.log(id.userId)
+
+  const [experienceData, setExperienceData] = useState([])
+  //console.log(experienceData)
+
+  const {experienceChoiceForSaveMovie, setExperienceChoiceForSaveMovie} = useState("");
 
 
 
@@ -48,6 +59,8 @@ const SelectMovie = () => {
   const [movieState, setMovieState] = useState({});
 
   const [streamingState, setStreamingState] = useState([{}]);
+
+
 
 
   // const [userUpdate, { error }] = useMutation(USER_UPDATE, {
@@ -250,9 +263,16 @@ const SelectMovie = () => {
     console.log(formState);
 
     // userUpdate({variables: {input: values}})
-
-
   };
+
+  const onExperienceDecision = (event) => {
+    const experienceIdChoice = event.target.value;
+    // setExperienceChoiceForSaveMovie({
+    //   newExperienceId: experienceIdChoice
+    //   });
+      console.log(experienceIdChoice)
+  }
+
 
   const onRefresh = async (e) => {
     e.preventDefault();
@@ -353,6 +373,18 @@ const SelectMovie = () => {
             
           </div>
         </div>
+
+        <div className='experience-choice-dropdown' tabIndex="1">
+        <label for="experience-selection">Select your experience:</label>
+          <select className='selectio-box' name="experience-selection" id="experience-selection" onChange={onExperienceDecision}>
+            {experienceData.myExperiences.map(e => {
+              return (
+                <option value={e._id}>{e.createdAt}, ({e._id})</option>
+              )
+            })}
+          </select>
+        </div>
+
         <div className='button-to-dinner'>
           <a href='/dinner' className='submit-button-dinner'>
             Now pick dinner!

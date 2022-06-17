@@ -136,7 +136,7 @@ const resolvers = {
           { $addToSet: { experiences: experience } },
           { new: true }
           )
-        console.log(updatedUser) 
+        // console.log(updatedUser) 
         return updatedUser;
 
       }
