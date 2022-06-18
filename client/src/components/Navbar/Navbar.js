@@ -111,7 +111,7 @@ export const NavBar = () => {
                 </NavItem>
 
                 <NavItem>
-                <NavLinks to="/movie" onClick={event =>  window.location.href='/movie'}>
+                <NavLinks to="/welcome" onClick={event =>  window.location.href='/welcome'}>
                     Get Started
                 </NavLinks>
                 </NavItem>

@@ -15,6 +15,7 @@ import SelectDrink from './pages/SelectDrink/SelectDrink';
 import Profile from './pages/Profile/Profile';
 import MyProfile from './pages/Profile/Profile';
 import About from './pages/About/About';
+import WelcomePage from './pages/WelcomePage/WelcomePage';
 
 
 const httpLink = createHttpLink({
@@ -77,6 +78,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/welcome">
+              <WelcomePage />
             </Route>
           </Switch>
       </Router>

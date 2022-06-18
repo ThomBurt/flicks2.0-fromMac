@@ -33,17 +33,12 @@ const SelectMovie = () => {
   useEffect(()=> {
     if (data) {
         // console.log(data)
-       setId({
-        userId: data.me._id
-        });
         setExperienceData({
           myExperiences: data.me.experiences 
         })
     }
 }, [data]);
 
-  const [id, setId] = useState("");
-  //console.log(id.userId)
 
   const [experienceData, setExperienceData] = useState([])
   //console.log(experienceData)
@@ -81,22 +76,6 @@ const SelectMovie = () => {
   //   }
   // })
 
-  const [addExperience] = useMutation(ADD_EXPERIENCE, {
-    update(cache, { data: { addExperience } }) {
-      try {
-                // update thought array's cache
-        // could potentially not exist yet, so wrap in a try/catch
-        const { experience } = cache.readQuery({ query: USER_TO_GET_EXPERIENCE_ID  });
-        // prepend the newest thought to the front of the array
-        cache.writeQuery({
-          query: USER_TO_GET_EXPERIENCE_ID ,
-          data: { experiences: [addExperience, ...experience] },
-        });
-      } catch (e) {
-        console.error(e);
-      }
-  }
-})
 
   // const { title, year, plot, image } = movieState;
 
@@ -231,17 +210,6 @@ const SelectMovie = () => {
   //console.log(newUserId)
 
 
-  const addNewExperience = async () => {
-    try {
-      await addExperience({
-        variables: { id: newUserId }
-      })
-      console.log('experience added')
-    } catch (e) {
-      console.error(e);
-    }
-  }
-
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -249,8 +217,6 @@ const SelectMovie = () => {
     findRandom();
 
     getMovie();
-
-    addNewExperience();
 
   };
 
