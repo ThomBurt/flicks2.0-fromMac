@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { FaHandPointUp } from 'react-icons/fa';
+import { AiFillDelete } from 'react-icons/ai';
 
 import './HistoryExperience.css';
 
@@ -52,7 +53,7 @@ const HistoryDB = (props) => {
         <div className='experience'>
             <div className='createdAtHeading'>
                 <h3>{createdAt.slice(0, 15)}</h3>
-                <button onClick={handleDeleteExperience}>X</button>
+                <button onClick={handleDeleteExperience}> <AiFillDelete /></button>
             </div>
             <div className='selection-container'> 
                  <div className='selection-div'>

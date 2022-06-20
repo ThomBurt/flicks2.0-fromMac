@@ -63,7 +63,7 @@ const About = () => {
             </div>
             <div className='get-started-about'>
                 <h1>Join the fun</h1>
-                <button onClick={event =>  window.location.href='/movie'}>Get Started</button>
+                <button onClick={event =>  window.location.href='/welcome'}>Get Started</button>
             </div>
         </div>
     )

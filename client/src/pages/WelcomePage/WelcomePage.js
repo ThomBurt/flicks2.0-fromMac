@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import { useQuery, useMutation } from '@apollo/client';
 
+import { FaHandPointUp } from 'react-icons/fa';
+
 import './WelcomePage.css';
 
 import ICON from '../../components/Assets/img/icon-WHITE.png'
@@ -82,7 +84,7 @@ const WelcomePage = () => {
                   <p>Click below to get started and start building your dream night in!</p>
                 </div>
                 <div className='welcome-button-div'>
-                    <button className='welcome-button-getStarted' onClick={handleButtonClick} >Get Started!</button>
+                    <button className='welcome-button-getStarted' onClick={handleButtonClick} >Let's choose a movie! <FaHandPointUp /></button>
                 </div>
             </div>
         </div>
