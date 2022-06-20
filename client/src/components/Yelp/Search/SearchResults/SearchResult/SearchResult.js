@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { Icon } from 'semantic-ui-react';
 import { FaHandPointUp } from 'react-icons/fa';
 import { MdFastfood } from 'react-icons/md';
@@ -6,8 +6,18 @@ import { MdFastfood } from 'react-icons/md';
 import { Modal } from './Modal';
 import styles from './SearchResult.module.css';
 
+
+
+
+
+
+
 export function SearchResult(props) {
+
   const [isOpen, setIsOpen] = useState(false);
+
+
+
 
 
   const b = props.business;
@@ -34,13 +44,6 @@ export function SearchResult(props) {
     <p key={b.id + addressLine}>{addressLine}</p>
   ));
 
-  // function submit(e) {
-  //     if(typeof props.search === 'function') {
-  //         props.search(name);
-  //     }
-  //     console.log(name, yelpBusinessURL, phone, pickup, delivery);
-  //     e.preventDefault();
-  // }
 
 
     const restaurantInfoObject = {
@@ -59,16 +62,21 @@ export function SearchResult(props) {
     }
 
 
+
+
+
+
   function onSubmit(e) {
 
-   console.log(name) 
-  //  console.log (b)
-  //localStorage.setItem('restaurantInfo', JSON.stringify(name));
-   localStorage.setItem("restaurantInfoObject", JSON.stringify(restaurantInfoObject))
-  //  localStorage.setItem('restaurantImage', JSON.stringify(b.image_url));
-  //  localStorage.setItem('restaurantRating', JSON.stringify(rating));
-  //  localStorage.setItem('restaurantReviews', JSON.stringify(b.review_count));
-  //  localStorage.setItem('restaurantPrice', JSON.stringify(b.price));
+    console.log(name) 
+    //  console.log (b)
+    //localStorage.setItem('restaurantInfo', JSON.stringify(name));
+    localStorage.setItem("restaurantInfoObject", JSON.stringify(restaurantInfoObject))
+    //  localStorage.setItem('restaurantImage', JSON.stringify(b.image_url));
+    //  localStorage.setItem('restaurantRating', JSON.stringify(rating));
+    //  localStorage.setItem('restaurantReviews', JSON.stringify(b.review_count));
+    //  localStorage.setItem('restaurantPrice', JSON.stringify(b.price));
+
     window.location.href='/drink';
   }
 
@@ -94,6 +102,8 @@ export function SearchResult(props) {
       <div className={styles['contact-info']}>
         <p>{b.phone}</p>
         {addressLines}
+
+
         <button
           className={styles['choose-button']}
           onClick={() => setIsOpen(true)}
@@ -103,14 +113,16 @@ export function SearchResult(props) {
             <FaHandPointUp />
           </span>
         </button>
+ 
         <Modal
           open={isOpen}
           visible={props}
           props={props.business}
           onClose={() => setIsOpen(false)}
         ></Modal>
-        <button onClick={onSubmit} className={styles['choose-button']}>Choose This Restaurant <span> <MdFastfood /></span></button>
+ 
       </div>
+
     </div>
   );
 }

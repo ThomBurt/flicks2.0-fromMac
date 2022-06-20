@@ -73,13 +73,12 @@ export const SAVE_MOVIE = gql`
 `;
 
 export const SAVE_RESTAURANT = gql `
-    mutation SaveRestaurant($id: ID!, $restaurantId: ID!, $name: String, $location: String, $url: String, $imageUrl: String, $rating: String) {
-      saveRestaurant(_id: $id, restaurantId: $restaurantId, name: $name, location: $location, url: $url, image_url: $imageUrl, rating: $rating) {
+    mutation SaveRestaurant($id: ID!, $restaurantId: ID!, $name: String, $url: String, $imageUrl: String, $rating: String) {
+      saveRestaurant(_id: $id, restaurantId: $restaurantId, name: $name, url: $url, image_url: $imageUrl, rating: $rating) {
         _id
         restaurant {
           _id
           name
-          location
           url
           image_url
           rating

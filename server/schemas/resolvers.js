@@ -241,10 +241,10 @@ const resolvers = {
           { 
             id: args.restaurantId, 
             name: args.name, 
-            locationAddress: args.locationAddress, 
-            locationCity: args.locationCity, 
-            locationState: args.locationState, 
-            locationZip: args.locationZip, 
+            // locationAddress: args.locationAddress, 
+            // locationCity: args.locationCity, 
+            // locationState: args.locationState, 
+            // locationZip: args.locationZip, 
             url: args.url,
             image_url: args.image_url, 
             rating: args.rating

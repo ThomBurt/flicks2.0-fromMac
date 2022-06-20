@@ -20,6 +20,8 @@ import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
 //import { PROFILE } from '../../utils/queries';
 import { GET_ME } from '../../utils/queries';
 
+import { FaHandPointUp } from 'react-icons/fa';
+
 
 
 const SelectMovie = () => {
@@ -398,7 +400,7 @@ const SelectMovie = () => {
             Now pick dinner!
           </a>
         </div> */}
-        <button className='submit-button-dinner' onClick={onDinnerClick}>Now pick your dinner!</button>
+        <button className='submit-button-dinner' onClick={onDinnerClick}>Now pick your dinner! <FaHandPointUp /></button>
       </div>
       }
 

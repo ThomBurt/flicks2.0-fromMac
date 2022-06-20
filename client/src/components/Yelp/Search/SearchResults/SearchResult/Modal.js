@@ -3,10 +3,14 @@ import './Modal.css';
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 
+import ExperienceSelection from '../../../../ExperienceSelection/ExperienceSelection';
+
 //import axios from 'axios';
 
 export function Modal({ open, children, onClose, props }) {
+
   if (!open) return null;
+
 
   const { name, location, rating, phone, url, image_url } = props;
 
@@ -16,9 +20,7 @@ export function Modal({ open, children, onClose, props }) {
     : 'https://via.placeholder.com/250';
 
 
-  //   const getCoordsFromAddress = async(address) => {
-
-  //     const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=
+  
   //       ${encodeURIComponent(address)}&key=AIzaSyAT-nlITvzakKRo0xMvxiovQyh2j6Lh6vg`)
 
   //       const data = response.data;
@@ -65,6 +67,8 @@ export function Modal({ open, children, onClose, props }) {
             window.open(url)
           }}>Business Website <span><FaSearch /></span></button>            
         </div>
+        <ExperienceSelection />
+
         <div className='map'>
            <iframe title="location" src={uriAddress} height="400" width ="800"></iframe>
         </div>
