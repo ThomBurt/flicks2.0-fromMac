@@ -14,7 +14,7 @@ import { SAVE_MOVIE } from '../../utils/mutations';
 //import { useQuery, useMutation } from '@apollo/react-hooks';
 import { useQuery, useMutation } from '@apollo/client';
 
-// import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
+import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
 //import { EXPERIENCE } from '../../utils/queries';
 
 //import { PROFILE } from '../../utils/queries';
@@ -54,7 +54,23 @@ const SelectMovie = () => {
   const [streamingState, setStreamingState] = useState([{}]);
 
 
-
+  // Save Movie Mutation 
+  const [saveMovie] = useMutation(SAVE_MOVIE, {
+    update(cache, { data: { saveMovie } }) {
+      try {
+                // update thought array's cache
+        // could potentially not exist yet, so wrap in a try/catch
+        const { movie } = cache.readQuery({ query: USER_TO_GET_EXPERIENCE_ID  });
+        // prepend the newest thought to the front of the array
+        cache.writeQuery({
+          query: USER_TO_GET_EXPERIENCE_ID ,
+          data: { movies: [saveMovie, ...movie] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+  }
+})
 
   // const [userUpdate, { error }] = useMutation(USER_UPDATE, {
   //   update(cache, { data: { userUpdate } }) {
@@ -201,11 +217,12 @@ const SelectMovie = () => {
       console.error(err);
     }
   };
+
+
   
-  //const streamingOutput = streamingState.map(item => <div style={{"marginRight" : "10px"}} key={item.name}>{item.name}</div>)
-  //console.log(data)
 
 
+  // function to handle the experience dropdown choice
   const onExperienceDecision = (event) => {
     event.preventDefault();
     const experienceIdChoice = event.target.value;
@@ -213,6 +230,29 @@ const SelectMovie = () => {
       console.log(experienceChoice)
   }
 
+
+
+
+
+  //Save movie to Experience
+  const saveMovieToExperience = async (event) => {
+    // event.preventDefault();
+    
+      try {
+        await saveMovie({
+          variables: { 
+            id: experienceChoice,
+            title: movieState.title,
+            year: movieState.year,
+            plot: movieState.plot,
+            imageUrl: movieState.image_url,
+          }
+        })
+        console.log('movie added')
+      } catch (e) {
+        console.error(e);
+      }
+  }
 
 
   const handleFormSubmit = async (event) => {
@@ -245,6 +285,12 @@ const SelectMovie = () => {
   const onGoBack = async(e) => {
     e.preventDefault();
     window.location.href='/movie';
+  }
+
+  const onDinnerClick = async (e) => {
+    e.preventDefault();
+    saveMovieToExperience();
+   window.location.href='/dinner'
   }
 
 
@@ -347,11 +393,12 @@ const SelectMovie = () => {
           </select>
         </div>
 
-        <div className='button-to-dinner'>
+        {/* <div className='button-to-dinner'>
           <a href='/dinner' className='submit-button-dinner'>
             Now pick dinner!
           </a>
-        </div>
+        </div> */}
+        <button className='submit-button-dinner' onClick={onDinnerClick}>Now pick your dinner!</button>
       </div>
       }
 
