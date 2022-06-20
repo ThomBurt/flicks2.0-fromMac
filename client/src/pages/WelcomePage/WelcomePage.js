@@ -75,8 +75,11 @@ const WelcomePage = () => {
     return(
         <div className='welcome-page-main'>
             <div>
-                <div className='icon-div'>
+                <div className='welcome-icon-div'>
                 <img src={ICON} className='logo' alt="food and flicks logo"></img>
+                </div>
+                <div>
+                  <p>Click below to get started and start building your dream night in!</p>
                 </div>
                 <div className='welcome-button-div'>
                     <button className='welcome-button-getStarted' onClick={handleButtonClick} >Get Started!</button>

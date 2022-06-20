@@ -1,5 +1,5 @@
 .welcome-page-main {
-    background: red;
+    background-image: linear-gradient(to bottom right, red, rgb(0, 0, 0));
     height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,6 +11,12 @@
     align-items: center;
     color: white;
     margin: 0;
+}
+
+.welcome-page-main p {
+    display: flex;
+    justify-content: center;
+    opacity: 0.8;
 }
 
 .welcome-button-div {
@@ -39,4 +45,14 @@
     background: #8db2bb;
     box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
     color: white;
+}
+
+.welcome-icon-div {
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+.welcome-icon-div img {
+    height: 320px;
 }

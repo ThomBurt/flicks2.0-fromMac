@@ -8,13 +8,13 @@ import axios from 'axios';
 import { FiRefreshCw } from "react-icons/fi";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
-import { USER_UPDATE } from '../../utils/mutations';
-import { ADD_EXPERIENCE } from '../../utils/mutations';
+// import { USER_UPDATE } from '../../utils/mutations';
+
 import { SAVE_MOVIE } from '../../utils/mutations';
 //import { useQuery, useMutation } from '@apollo/react-hooks';
 import { useQuery, useMutation } from '@apollo/client';
 
-import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
+// import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
 //import { EXPERIENCE } from '../../utils/queries';
 
 //import { PROFILE } from '../../utils/queries';
@@ -43,9 +43,7 @@ const SelectMovie = () => {
   const [experienceData, setExperienceData] = useState([])
   //console.log(experienceData)
 
-  const {experienceChoiceForSaveMovie, setExperienceChoiceForSaveMovie} = useState("");
-
-
+  const {experienceChoice, setExperienceChoice} = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -206,8 +204,14 @@ const SelectMovie = () => {
   
   //const streamingOutput = streamingState.map(item => <div style={{"marginRight" : "10px"}} key={item.name}>{item.name}</div>)
   //console.log(data)
-  const newUserId = (id.userId)
-  //console.log(newUserId)
+
+
+  const onExperienceDecision = (event) => {
+    event.preventDefault();
+    const experienceIdChoice = event.target.value;
+    setExperienceChoice({ chosenId: experienceIdChoice });
+      console.log(experienceChoice)
+  }
 
 
 
@@ -230,14 +234,6 @@ const SelectMovie = () => {
 
     // userUpdate({variables: {input: values}})
   };
-
-  const onExperienceDecision = (event) => {
-    const experienceIdChoice = event.target.value;
-    // setExperienceChoiceForSaveMovie({
-    //   newExperienceId: experienceIdChoice
-    //   });
-      console.log(experienceIdChoice)
-  }
 
 
   const onRefresh = async (e) => {
