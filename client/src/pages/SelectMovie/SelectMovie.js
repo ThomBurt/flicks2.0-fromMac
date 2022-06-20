@@ -246,7 +246,7 @@ const SelectMovie = () => {
             title: movieState.title,
             year: movieState.year,
             plot: movieState.plot,
-            imageUrl: movieState.image_url,
+            imageUrl: movieState.image,
           }
         })
         console.log('movie added')
