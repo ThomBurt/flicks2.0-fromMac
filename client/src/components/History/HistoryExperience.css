@@ -11,7 +11,27 @@
 
 .createdAtHeading {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-left: 20px;
+    flex-direction: row;
+}
+.createdAtHeading button{
+    background-color: red;
+    border: none;
+    border-radius: 7px;
+    color: bisque;
+    margin-left: 20px;
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.createdAtHeading button:hover{
+    background-color: rgb(201, 9, 9);
+
 }
 .createdAtHeading h3 {
     text-decoration: underline;

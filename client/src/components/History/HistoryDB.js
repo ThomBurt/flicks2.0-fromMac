@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
-
+import { useQuery, useMutation } from '@apollo/client';
 import { FaHandPointUp } from 'react-icons/fa';
 
 import './HistoryExperience.css';
 
 import {HistoryDrinkModal} from './HistoryDrinkModal';
 
+import { REMOVE_EXPERIENCE } from '../../utils/mutations';
+
+import { GET_ME } from '../../utils/queries';
+
 
 const HistoryDB = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const {data} = useQuery(GET_ME);
+    const [removeExperience] = useMutation(REMOVE_EXPERIENCE);
 
+    console.log(data)
+    
     // let searchResults = null;
     let experience = props.experience
     console.log(experience)
@@ -24,11 +32,27 @@ const HistoryDB = (props) => {
     //     open={isOpen} visible={props} onClose={()=> setIsOpen(false)}   />);
     
     // console.log(movie[0].title)
+
+    const handleDeleteExperience = async (e) => {
+        e.preventDefault();
+        try {
+            await removeExperience({
+                variables: {
+                    id: data.me._id,
+                    experienceId: experience._id
+                }
+            })
+        } catch (e) {
+            console.error(e);
+          }
+          window.location.reload();
+    }
   
     return(
         <div className='experience'>
             <div className='createdAtHeading'>
                 <h3>{createdAt.slice(0, 15)}</h3>
+                <button onClick={handleDeleteExperience}>X</button>
             </div>
             <div className='selection-container'> 
                  <div className='selection-div'>
@@ -38,7 +62,7 @@ const HistoryDB = (props) => {
                         </h4>
                       </div>
                       <div>
-                          <img className="moviePosterHistory" src={movie[0].image_url} alt="movieposter"></img>
+                          <img className="moviePosterHistory" src={movie[0].image_url} alt ="movieposter"></img>
                       </div>
                       <button className='click-button-for-modal'><FaHandPointUp /></button>
                  </div>
@@ -65,8 +89,11 @@ const HistoryDB = (props) => {
                     <button onClick={() => setIsOpen(true)} className='click-button-for-modal'><FaHandPointUp /></button>
                     <HistoryDrinkModal open={isOpen} visible={props} onClose={()=> setIsOpen(false)} />
                     {/* {drinkSearchResults} */}
+ 
                 </div>
+
             </div>
+
         </div>
   
     )

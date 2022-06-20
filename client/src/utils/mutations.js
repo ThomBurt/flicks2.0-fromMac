@@ -99,3 +99,11 @@ export const SAVE_DRINK = gql `
         }
       }
 `;
+
+
+export const REMOVE_EXPERIENCE = gql `
+  mutation RemoveExperience($id: ID!, $experienceId: ID) {
+    removeExperience(_id: $id, experienceId: $experienceId) {
+      _id
+    }
+}`
