@@ -73,8 +73,8 @@ export const SAVE_MOVIE = gql`
 `;
 
 export const SAVE_RESTAURANT = gql `
-    mutation SaveRestaurant($id: ID!, $restaurantId: ID!, $name: String, $url: String, $imageUrl: String, $rating: String) {
-      saveRestaurant(_id: $id, restaurantId: $restaurantId, name: $name, url: $url, image_url: $imageUrl, rating: $rating) {
+    mutation SaveRestaurant($id: ID!, $name: String, $url: String, $imageUrl: String, $rating: String) {
+      saveRestaurant(_id: $id, name: $name, url: $url, image_url: $imageUrl, rating: $rating) {
         _id
         restaurant {
           _id
@@ -88,8 +88,8 @@ export const SAVE_RESTAURANT = gql `
 `;
 
 export const SAVE_DRINK = gql `
-      mutation SaveDrink($id: ID!, $drinkId: ID!, $name: String, $description: String, $imageUrl: String) {
-        saveDrink(_id: $id, drinkId: $drinkId, name: $name, description: $description, image_url: $imageUrl) {
+      mutation SaveDrink($id: ID!, $name: String, $description: String, $imageUrl: String) {
+        saveDrink(_id: $id, name: $name, description: $description, image_url: $imageUrl) {
           _id
           drink {
             name

@@ -16,10 +16,6 @@ export function SearchResult(props) {
 
   const [isOpen, setIsOpen] = useState(false);
 
-
-
-
-
   const b = props.business;
   if (!b) {
     return <div />;

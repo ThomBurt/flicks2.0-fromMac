@@ -247,7 +247,6 @@ const resolvers = {
             // locationZip: args.locationZip, 
             url: args.url,
             image_url: args.image_url, 
-            rating: args.rating
           } 
         )
 

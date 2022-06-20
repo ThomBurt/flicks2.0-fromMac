@@ -51,7 +51,7 @@ const SelectDrink = () => {
   }
   })
 
-  console.log(drinkExperienceData)
+  // console.log(drinkExperienceData)
 
 
 
@@ -88,7 +88,6 @@ const SelectDrink = () => {
     
       // function to handle the experience dropdown choice
       const onExperienceDecision = (event) => {
-        event.preventDefault();
         const experienceIdChoice = event.target.value;
         setExperienceChoice(experienceIdChoice);
           console.log(experienceChoice)

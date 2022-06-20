@@ -226,7 +226,6 @@ const SelectMovie = () => {
 
   // function to handle the experience dropdown choice
   const onExperienceDecision = (event) => {
-    event.preventDefault();
     const experienceIdChoice = event.target.value;
     setExperienceChoice(experienceIdChoice);
       console.log(experienceChoice)
