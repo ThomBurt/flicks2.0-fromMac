@@ -43,7 +43,7 @@ const SelectMovie = () => {
   const [experienceData, setExperienceData] = useState([])
   //console.log(experienceData)
 
-  const {experienceChoice, setExperienceChoice} = useState("");
+  const [experienceChoice, setExperienceChoice] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -209,7 +209,7 @@ const SelectMovie = () => {
   const onExperienceDecision = (event) => {
     event.preventDefault();
     const experienceIdChoice = event.target.value;
-    setExperienceChoice({ chosenId: experienceIdChoice });
+    setExperienceChoice(experienceIdChoice);
       console.log(experienceChoice)
   }
 
