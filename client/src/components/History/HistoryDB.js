@@ -59,7 +59,7 @@ const HistoryDB = (props) => {
                  <div className='selection-div'>
                       <div>
                         <h4>
-                            {/* {movie[0].title} */}
+                            {movie[0].title}
                         </h4>
                       </div>
                       <div>

@@ -30,6 +30,7 @@ export function Modal({ open, children, onClose, props }) {
 
   const [experienceChoice, setExperienceChoice] = useState("");
   const [restaurantExperienceData, setRestaurantExperienceData] = useState([])
+  const [isHovering, setIsHovering] = useState(false);
 
     // Save Movie Mutation 
     const [saveRestaurant] = useMutation(SAVE_RESTAURANT, {
@@ -114,6 +115,14 @@ export function Modal({ open, children, onClose, props }) {
     }
 
 
+    const handleMouseOver = () => {
+      setIsHovering(true);
+    };
+    
+    const handleMouseOut = () => {
+      setIsHovering(false);
+    };
+
 
   return (
     <div className="modal-styles">
@@ -140,15 +149,17 @@ export function Modal({ open, children, onClose, props }) {
           }}>Business Website <span><FaSearch /></span></button>            
         </div>
 
-        <div className='experience-choice-dropdown' tabIndex="1">
+        <div className='experience-choice-dropdown' tabIndex="1"   onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
         <label for="experience-selection">Select your experience:</label>
           <select className='selectio-box' name="experience-selection" id="experience-selection"  onChange={onExperienceDecision}>
             {restaurantExperienceData.myExperiences?.map(e => {
               return (
-                <option value={e._id}>{e.createdAt}, ({e._id})</option>
+                <option value={e._id}>{e.createdAt}</option>
               )
             })}
           </select>
+
+          {isHovering && <p>To add this restaurant to your night in, select the 'Experience' in the dropdown that matches today's date.</p>}
         </div>
 
         <div>

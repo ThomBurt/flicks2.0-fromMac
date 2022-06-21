@@ -17,6 +17,8 @@ import { USER_TO_GET_EXPERIENCE_ID } from "../../utils/queries";
 const SelectDrink = () => {
     const [drinkState, setDrinkState] = useState({});
 
+    const [isHovering, setIsHovering] = useState(false);
+
     const [drinkExperienceData, setDrinkExperienceData] = useState([])
     //console.log(experienceData)
   
@@ -133,6 +135,20 @@ const SelectDrink = () => {
        window.location.href='/history'
       }
 
+
+
+
+      const handleMouseOver = () => {
+        setIsHovering(true);
+      };
+      
+      const handleMouseOut = () => {
+        setIsHovering(false);
+      };
+    
+
+
+
     return(
         <main className='cocktail-main'>
             <div className='cocktail-button-div' id="main-button">
@@ -155,15 +171,17 @@ const SelectDrink = () => {
                 </div>
                 </div>
 
-                <div className='experience-choice-dropdown' tabIndex="1">
+                <div className='experience-choice-dropdown' tabIndex="1"  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                   <label >Select your experience:</label>
                     <select className='selectio-box' name="experience-selection" id="experience-selection" onChange={onExperienceDecision}>
                       {drinkExperienceData.myDrinkExperiences?.map(d => {
                         return (
-                          <option value={d._id}>{d.createdAt}, ({d._id})</option>
+                          <option value={d._id}>{d.createdAt}</option>
                         )
                       })}
                     </select>
+
+                    {isHovering && <p>To add this drink to your night in, select the 'Experience' in the dropdown that matches today's date.</p>}
                 </div>
 
 

@@ -44,7 +44,7 @@ const MyProfile = () => {
                 lastName: data.profile.lastName,
                 email: data.profile.email,
                 //images: omitDeep(data.profile.images, ["__typename"]),
-                images: data.profile.images,
+               // images: data.profile.images,
                 headline: data.profile.headline,
             });
         }
@@ -133,7 +133,7 @@ const MyProfile = () => {
 
     return (
         <div className='main-my-profile-div'>
-            <div>
+            <div className='profile-nav'>
                 <ProfileNav />
             </div>
             <div>
@@ -153,7 +153,7 @@ const MyProfile = () => {
    
                                         <form onSubmit={handleSubmit}>
                                         {/* <h1>Update Profile</h1> */}
-                                            <div className='input-div'>
+                                            {/* <div className='input-div'>
                                                     <label>Images</label>
                                                     <input 
                                                         name="images"
@@ -164,7 +164,7 @@ const MyProfile = () => {
                                                         className="image-input-form-update-profile" 
                                                         placeholder='Image' >
                                                     </input>
-                                                </div>
+                                                </div> */}
                                                 {/* <div className='image-profile'>
                                                     <div class="dashes"></div>
                                                     <label>Click to browse or drag an image here</label>

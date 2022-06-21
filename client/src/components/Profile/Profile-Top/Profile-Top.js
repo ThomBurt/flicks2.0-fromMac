@@ -76,12 +76,12 @@ const ProfileTop = () => {
                     </div>
                     <div className='overall-button-div'>
                         <div className='button-div-header'>
-                            <button className='button-edit-profile'     onClick={(e) => {
+                            {/* <button className='button-edit-profile'     onClick={(e) => {
                                 e.preventDefault();
                                 window.location.href='/update-profile';
                                 }}><span><RiPencilFill/> </span>Edit Profile
-                            </button>
-                            <p>Been 'Flicks-ing' since <span className='createdAtSpan'>{createdAt.slice(0, 4)}</span></p>
+                            </button> */}
+                            <p>{firstName}, you've been 'Flicks-ing' since <span className='createdAtSpan'>{createdAt.slice(0, 4)}</span></p>
                         </div>
                     </div>
 

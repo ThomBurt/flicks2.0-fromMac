@@ -77,11 +77,11 @@ const ProfileNav = () => {
                                 </Link>
                             </li>
 
-                            <li tabIndex="0" className='updateProfileLi'>
+                            {/* <li tabIndex="0" className='updateProfileLi'>
                                 <Link to="/update-profile" style={{color: 'black', textDecoration: 'none'}} onClick={event => window.location.href='/update-profile'}>
                                     <span>Update Profile</span> <span><VscEdit /></span>
                                 </Link>
-                            </li>
+                            </li> */}
 
                             <li tabIndex="0" className='updateProfileLi'>
                                 <Link to="/history" style={{color: 'black', textDecoration: 'none'}} onClick={event => window.location.href='/history'}>
@@ -89,23 +89,23 @@ const ProfileNav = () => {
                                 </Link>
                             </li>
 
-                            <li tabIndex="0" className='updateProfileLi'>
+                            {/* <li tabIndex="0" className='updateProfileLi'>
                                 <Link to="/forgot-password" style={{color: 'black', textDecoration: 'none'}} onClick={event => window.location.href='/forgot-password'}>
                                     <span>Password</span> <span><RiLockPasswordLine /></span>
                                 </Link>
-                            </li>
+                            </li> */}
 
-                            <li tabIndex="0" className='updateProfileLi'>
+                            {/* <li tabIndex="0" className='updateProfileLi'>
                                 <Link to="/friends" style={{color: 'black', textDecoration: 'none'}}  onClick={event => window.location.href='/friends'}>
                                     <span>Friends</span> <span><FaUserFriends /></span>
                                 </Link>
-                            </li>
+                            </li> */}
 
-                            <li tabIndex="0" className='updateProfileLi'>
+                            {/* <li tabIndex="0" className='updateProfileLi'>
                                 <Link to="/settings" style={{color: 'black', textDecoration: 'none'}} onClick={event => window.location.href='/settings'}>
                                     <span>Settings</span> <span><FiSettings/></span>
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                 </nav>
             </div>

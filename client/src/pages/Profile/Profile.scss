@@ -130,3 +130,19 @@
 .thom-img {
     margin-left: 400px;
 }
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .profile-nav {
+        display: none;
+    }
+    .main-my-profile-div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 260px;
+    }
+}

@@ -66,3 +66,32 @@
       width: 40%;
     }
 }
+
+
+
+@media only screen and (max-width: 600px) {
+  .search-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .business-info {
+    text-align: center;
+  }
+  .contact-info {
+    text-align: center;;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .search-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .business-info {
+    text-align: center;
+  }
+  .contact-info {
+    text-align: center;;
+  }
+}

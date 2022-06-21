@@ -55,6 +55,8 @@ const SelectMovie = () => {
 
   const [streamingState, setStreamingState] = useState([{}]);
 
+  const [isHovering, setIsHovering] = useState(false);
+
 
   // Save Movie Mutation 
   const [saveMovie] = useMutation(SAVE_MOVIE, {
@@ -294,6 +296,15 @@ const SelectMovie = () => {
    window.location.href='/dinner'
   }
 
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+  
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
+
 
 
   return (
@@ -383,15 +394,17 @@ const SelectMovie = () => {
           </div>
         </div>
 
-        <div className='experience-choice-dropdown' tabIndex="1">
+        <div className='experience-choice-dropdown' tabIndex="1" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
         <label for="experience-selection">Select your experience:</label>
           <select className='selectio-box' name="experience-selection" id="experience-selection" onChange={onExperienceDecision}>
             {experienceData.myExperiences.map(e => {
               return (
-                <option value={e._id}>{e.createdAt}, ({e._id})</option>
+                <option value={e._id}>{e.createdAt}</option>
               )
             })}
           </select>
+
+          {isHovering && <p>To add this movie to your night in, select the 'Experience' in the dropdown that matches today's date.</p>}
         </div>
 
         {/* <div className='button-to-dinner'>

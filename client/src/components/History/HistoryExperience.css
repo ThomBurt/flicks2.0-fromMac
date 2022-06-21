@@ -92,3 +92,41 @@
     background-color: rgba(255, 255, 255, 0.58);
 }
 
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .experience {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-right: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .experience {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 0 50px;
+    }
+
+    .selection-container {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+    }
+    .moviePosterHistory {
+        height: 150px;
+    }
+    
+    .restaurantHistoryImage {
+        height: 60px;
+    }
+    
+    .drinkHistoryImage {
+        height: 80px;
+    }
+  }

@@ -79,7 +79,6 @@ const typeDefs = gql`
     email: String
     firstName: String
     lastName: String
-    images: [ImageInput]
     headline: String
   }
 
@@ -102,7 +101,7 @@ const typeDefs = gql`
 
     addUser(username: String!, firstName: String!, lastName: String!, email: String!, password: String!, image: String): Auth
 
-    userUpdate(input: UserUpdateInput): User!
+    userUpdate(input: UserUpdateInput): User
 
 
     addExperience(_id: ID, experienceId:ID, createdAt: String): Experiences
