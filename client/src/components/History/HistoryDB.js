@@ -12,6 +12,7 @@ import { REMOVE_EXPERIENCE } from '../../utils/mutations';
 import { GET_ME } from '../../utils/queries';
 
 
+
 const HistoryDB = (props) => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -34,8 +35,9 @@ const HistoryDB = (props) => {
     
     // console.log(movie[0].title)
 
-    const handleDeleteExperience = async (e) => {
-        e.preventDefault();
+    const handleDeleteExperience = async () => {
+
+
         try {
             await removeExperience({
                 variables: {
@@ -48,6 +50,11 @@ const HistoryDB = (props) => {
           }
           window.location.reload();
     }
+
+
+
+
+
   
     return(
         <div className='experience'>
@@ -65,7 +72,7 @@ const HistoryDB = (props) => {
                       <div>
                           <img className="moviePosterHistory" src={movie[0].image_url} alt ="movieposter"></img>
                       </div>
-                      <button className='click-button-for-modal'><FaHandPointUp /></button>
+                      {/* <button className='click-button-for-modal'><FaHandPointUp /></button> */}
                  </div>
   
                 <div className='selection-div'>
@@ -75,7 +82,7 @@ const HistoryDB = (props) => {
                       <div>
                           <img className='restaurantHistoryImage' src={restaurant[0].image_url} alt="restaurantpic"></img>
                       </div>
-                      <button className='click-button-for-modal'><FaHandPointUp /></button>
+                      {/* <button className='click-button-for-modal'><FaHandPointUp /></button> */}
                 </div>
   
                 <div className='selection-div'>
@@ -87,8 +94,8 @@ const HistoryDB = (props) => {
                           <img className='drinkHistoryImage' src={drink[0].image_url} alt="drinkpic"></img>
                       </div>
                     </div>
-                    <button onClick={() => setIsOpen(true)} className='click-button-for-modal'><FaHandPointUp /></button>
-                    <HistoryDrinkModal open={isOpen} visible={props} onClose={()=> setIsOpen(false)} />
+                    {/* <button onClick={() => setIsOpen(true)} className='click-button-for-modal'><FaHandPointUp /></button>
+                    <HistoryDrinkModal open={isOpen} visible={props} onClose={()=> setIsOpen(false)} /> */}
                     {/* {drinkSearchResults} */}
  
                 </div>
