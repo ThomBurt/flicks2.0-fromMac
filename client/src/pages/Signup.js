@@ -128,7 +128,7 @@ const Signup = () => {
                 />
                 <input
                   className='pw-input'
-                  placeholder='******'
+                  placeholder='password'
                   name='password'
                   type='password'
                   id='password'

@@ -58,7 +58,7 @@ export const Login = (props) => {
               />
               <input
                 className='pw-input'
-                placeholder='******'
+                placeholder='Password'
                 name='password'
                 type='password'
                 id='password'

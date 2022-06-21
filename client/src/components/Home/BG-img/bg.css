@@ -10,16 +10,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-top: 1px solid white;
 }
 
 .main-div {
     display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-}
-
-.main-div video {
-    height: 350px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .icon-div {
@@ -30,7 +27,6 @@
 .header {
     color: white;
     display: flex;
-    justify-content: center;
     text-transform: uppercase;
     font-family: "proxima-nova", sans-serif;
     font-style: normal;
@@ -41,9 +37,8 @@
 }
 
 .button-div {
-    display: flex ;
+    display: flex;
     justify-content: center;
-    margin: 50px;
 }
 
 .button-getStarted {
@@ -79,6 +74,12 @@
         justify-content: center ;
         font-size: 30px;
         text-align: center;
+    }
+    .main-div {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        flex-direction: column;
     }
 
   }

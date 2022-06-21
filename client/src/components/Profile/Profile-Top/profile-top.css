@@ -66,3 +66,27 @@
 .createdAtSpan {
     text-decoration: underline;
 }
+
+
+
+
+
+@media (max-width: 500px) {
+    .my-profile-main {
+        margin-left: 0;
+    }
+    .top-profile-bar  {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .overall-button-div {
+        display: flex;
+        justify-content: center;
+    }
+    .button-div-header  p{
+        font-size: 12px;
+    }
+
+  }
