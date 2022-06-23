@@ -1,5 +1,6 @@
 # Deployed Link:
-
+https://git.heroku.com/flicksandfood.git
+https://flicksandfood.herokuapp.com/ 
 
 # User Story
 AS A fan of staying in
