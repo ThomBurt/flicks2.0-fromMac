@@ -66,21 +66,21 @@ const HistoryDB = (props) => {
                  <div className='selection-div'>
                       <div>
                         <h4>
-                            {movie[0].title}
+                            {movie[0]?.title}
                         </h4>
                       </div>
                       <div>
-                          <img className="moviePosterHistory" src={movie[0].image_url} alt ="movieposter"></img>
+                          <img className="moviePosterHistory" src={movie[0]?.image_url} alt ="movieposter"></img>
                       </div>
                       {/* <button className='click-button-for-modal'><FaHandPointUp /></button> */}
                  </div>
   
                 <div className='selection-div'>
                       <h4>
-                           {restaurant[0].name}
+                           {restaurant[0]?.name}
                       </h4>
                       <div>
-                          <img className='restaurantHistoryImage' src={restaurant[0].image_url} alt="restaurantpic"></img>
+                          <img className='restaurantHistoryImage' src={restaurant[0]?.image_url} alt="restaurantpic"></img>
                       </div>
                       {/* <button className='click-button-for-modal'><FaHandPointUp /></button> */}
                 </div>
@@ -88,10 +88,10 @@ const HistoryDB = (props) => {
                 <div className='selection-div'>
                     <div>
                         <h4>
-                          {drink[0].name}
+                          {drink[0]?.name}
                         </h4>
                         <div>
-                          <img className='drinkHistoryImage' src={drink[0].image_url} alt="drinkpic"></img>
+                          <img className='drinkHistoryImage' src={drink[0]?.image_url} alt="drinkpic"></img>
                       </div>
                     </div>
                     {/* <button onClick={() => setIsOpen(true)} className='click-button-for-modal'><FaHandPointUp /></button>
