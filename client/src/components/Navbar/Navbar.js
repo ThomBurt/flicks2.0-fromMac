@@ -99,7 +99,7 @@ export const NavBar = () => {
                 <NavMenu onClick={handleClick} click={click}>
 
                 <NavItem>
-                <NavLinks to="/home" onClick={event =>  window.location.href='/'}>
+                <NavLinks to="/" onClick={event =>  window.location.href='/'}>
                     Home
                 </NavLinks>
                 </NavItem>
@@ -159,7 +159,7 @@ export const NavBar = () => {
             <NavMenu onClick={handleClick} click={click}>
 
                 <NavItem>
-                <NavLinks to="/home" onClick={event =>  window.location.href='/'}>
+                <NavLinks to="/" onClick={event =>  window.location.href='/'}>
                     Home
                 </NavLinks>
                 </NavItem>
@@ -179,7 +179,7 @@ export const NavBar = () => {
         <IconContext.Provider value={{ color: '#fff' }}>
             <Nav>
                 <NavContainer>
-                    <NavLogo to="/" onClick={event =>  window.location.href='/home'}>
+                    <NavLogo to="/" onClick={event =>  window.location.href='/'}>
                         {/* <Image src={logo} /> */}
                         <Icon src={title} />
                     </NavLogo>

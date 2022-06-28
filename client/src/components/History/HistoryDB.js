@@ -5,7 +5,7 @@ import { AiFillDelete } from 'react-icons/ai';
 
 import './HistoryExperience.css';
 
-import {HistoryDrinkModal} from './HistoryDrinkModal';
+//  import {HistoryDrinkModal} from './HistoryDrinkModal';
 
 import { REMOVE_EXPERIENCE } from '../../utils/mutations';
 
